@@ -62,7 +62,7 @@ The files above implement a player interaction system using composition.  Design
 
 ### Hybrid 
 
-A hybrid aproach (not done here) would use both composition (a component) and inheritance (an interface) providing access to the component.  You get the benefits of both but a draw back of requiring a little more setup work and code knowledge.
+A hybrid aproach (not done here) would use both composition (a component) and inheritance (an interface) providing immediate knowledge of the behavior and access to the component.  You get the benefits of both but a draw back of requiring a little more setup work and code knowledge.
 
 ## Other Code/UE4 Features
 
