@@ -41,7 +41,7 @@ This video demonstrates the current functionality of the player interaction and 
 [![Puzzle Node Video](http://img.youtube.com/vi/Sl4gk7NlG6Q/0.jpg)](http://www.youtube.com/watch?v=Sl4gk7NlG6Q)
 <br/>https://www.youtube.com/watch?v=Sl4gk7NlG6Q
 
-## Composition vs Inheritence
+## Composition vs Inheritance
 
 There are two implementations of the player interaction system for comparison.
 
