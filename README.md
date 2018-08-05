@@ -68,15 +68,15 @@ The files above implement a player interaction system using composition.  Design
 * Soft Object References
 * Basic 3D math
 * AI
- * AI Controllers
- * Behavior Trees
- * Behavior Tree Tasks
- * Blackboards
+  * AI Controllers
+  * Behavior Trees
+  * Behavior Tree Tasks
+  * Blackboards
 * Events/Notifications by
- * virtual overrides
- * blueprint implementable events
- * blueprint native events
- * dynamic multicast delegates
+  * virtual overrides
+  * blueprint implementable events
+  * blueprint native events
+  * dynamic multicast delegates
 * Use of Pointers/References
 * Skeletal Animation Retargeting
 * Project Content Organization
