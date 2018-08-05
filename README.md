@@ -26,12 +26,12 @@ The inheriting actor gets to decide what constitutes a puzzle being 'solved'. Th
 By chaining together many puzzle node actors you can create elaborate puzzle dungeons that require multiple areas to be solved before the final node is solved.  You can set nodes up to allow the player to solve the dungeon puzzles in any order or in a specific order (by having nodes prevent access to other areas by using locked doors, draw bridges etc.)
 
 Examples: 
-* one or more simple torches, levers or switches that must be lit, pulled or pressed
-* a series statues that must be rotated to show certain images
-* a combination lock that must be dialed to a certain number or series of glyphs
-* a pedestal or area the player must move some other specified object onto
-* combinations of the above:
-  * a statue that must be rotated a certain way in along with pulling a momentary lever to check it.
+* One or more simple torches, levers or switches that must be lit, pulled or pressed
+* A series of statues that must be rotated to show certain images
+* A combination lock that must be dialed to a certain number or series of glyphs
+* A pedestal or area the player must move some other specified object onto
+* Combinations:
+  * A statue that must be rotated a certain way along with pulling a momentary lever to check if it's correct.
 
 
 ### Video
@@ -79,6 +79,7 @@ The files above implement a player interaction system using composition.  Design
   * dynamic multicast delegates
 * Use of Pointers/References
 * Skeletal Animation Retargeting
+* Materials (see HologramMap)
 * Project Content Organization
  
 
