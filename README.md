@@ -2,7 +2,7 @@
 
 Hi! This project is meant to demonstrate Unreal Engine 4 project organization and coding proficiency.
 
-The sample code adheres to a coding standard.  In this case: <br/>
+The sample project adheres to a coding standard.  In this case: <br/>
 https://docs.unrealengine.com/en-us/Programming/Development/CodingStandard
 
 ## Overview
