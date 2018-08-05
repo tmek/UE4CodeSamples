@@ -51,7 +51,7 @@ https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Adventur
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Interactable.h
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/InteractableActor.h
 
-The files above implement a player interaction system using inheritance.  Designers can easily create derived blueprints that respond to the use and stop using blueprint events.  One flaw of this approach is it would be difficult to make classes that have already derived from actor (such as ACharacter) interactable.  This implementation can be demoed in the "ExampleMap".
+The files above implement a player interaction system using inheritance.  Designers can easily create derived blueprints that respond to the 'use' and 'stop using' blueprint events.  One flaw of this approach is it would be difficult to make classes that have already derived from actor (such as ACharacter) interactable.  This implementation can be demoed in the "ExampleMap".
 
 ### Composition
 
