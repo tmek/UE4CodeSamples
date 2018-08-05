@@ -51,14 +51,14 @@ https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Adventur
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Interactable.h
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/InteractableActor.h
 
-The files above implement a player interaction system using inheritance.  Designers can easily create derived blueprints that respond to the use and stop using blueprint events.  One flaw of this approach is it would be difficult to make classes that have already derived from actor (such as ACharacter) interactable.  This can be demoed in the "ExampleMap"
+The files above implement a player interaction system using inheritance.  Designers can easily create derived blueprints that respond to the use and stop using blueprint events.  One flaw of this approach is it would be difficult to make classes that have already derived from actor (such as ACharacter) interactable.  This implementation can be demoed in the "ExampleMap"
 
 ### Composition
 
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Components/InteractionComponent.h
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Components/InteractableComponent.h
 
-The files above implement a player interaction system using composition.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This can be demoed in the "TestMap".  As a comparison Characters in this level have been given and interactable component that will make them jump when the player presses the interact key.
+The files above implement a player interaction system using composition.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This implementation can be demoed in the "TestMap".  For comparison the NPC characters in this level have been given an interactable component that will make them jump when the player presses the interact key.
 
 ## Other Code/UE4 Features
 
