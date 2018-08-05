@@ -60,7 +60,7 @@ https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/C
 
 The files above implement a player interaction system using composition.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This can be demoed in the "TestMap".  As a comparison Characters in this level have been given and interactable component that will make them jump when the player presses the interact key.
 
-## Other Project Features
+## Other Code/UE4 Features
 
 * UE4 Interfaces
 * UE4 Typed Enums
@@ -77,7 +77,7 @@ The files above implement a player interaction system using composition.  Design
   * blueprint implementable events
   * blueprint native events
   * dynamic multicast delegates
-* Use of Pointers/References
+* Use of Pointers and References
 * Skeletal Animation Retargeting
 * Materials (see HologramMap)
 * Project Content Organization
