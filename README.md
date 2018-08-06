@@ -23,7 +23,7 @@ For example two torches (nodes a and b) might need to be lit for a door (node c)
 
 The inheriting actor gets to decide what constitutes a puzzle node being 'solved'. They can have their own logic and state that ultimately results in it being solved or unsolved.
 
-By chaining together many puzzle node actors you can create elaborate puzzle dungeons that require multiple areas to be solved before the final node is solved.  You can set nodes up to allow the player to solve the dungeon puzzles in any order or in a specific order (by having nodes prevent access to other areas by using locked doors, draw bridges etc.)
+By chaining together puzzle node actors you can create elaborate puzzle dungeons that require multiple areas to be solved before the final node is solved.  You can set nodes up to allow the player to solve the dungeon puzzles in any order or in a specific order (by having nodes prevent access to other areas by using locked doors, draw bridges etc.)
 
 Examples: 
 * One or more simple torches, levers or switches that must be lit, pulled or pressed
