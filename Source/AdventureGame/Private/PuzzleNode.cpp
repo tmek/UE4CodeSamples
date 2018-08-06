@@ -49,9 +49,9 @@ void APuzzleNode::EvaluateChildren()
 	EPuzzleNodeState NewState = EPuzzleNodeState::Solved;
 
 	// new state should be unsolved if any children are unsolved
-	for (TSoftObjectPtr<APuzzleNode> PuzzleNode : ChildNodes)
+	for (TSoftObjectPtr<APuzzleNode> Child : ChildNodes)
 	{
-		if (PuzzleNode->State == EPuzzleNodeState::Unsolved) 
+		if (Child->State == EPuzzleNodeState::Unsolved) 
 		{
 			NewState = EPuzzleNodeState::Unsolved;
 			break;
@@ -89,8 +89,8 @@ void APuzzleNode::OnStateChanged()
 void APuzzleNode::OnChildrenModified()
 {
 	// ensure children have a reference back to their parent
-	for (auto PuzzleNode : ChildNodes)
+	for (TSoftObjectPtr<APuzzleNode> Child : ChildNodes)
 	{
-		PuzzleNode->Parent = this;
+		Child->Parent = this;
 	}
 }
