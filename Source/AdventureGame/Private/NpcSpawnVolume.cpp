@@ -28,6 +28,7 @@ void ANpcSpawnVolume::BeginPlay()
 	FVector const BoxExtent = GetBrushComponent()->Bounds.BoxExtent;
 	FBox const VolumeBox = FBox(BoxOrigin - BoxExtent, BoxOrigin + BoxExtent);
 
+	// spawn npcs
 	for (int i = 0; i < SpawnCount; i++)
 	{
 		FVector const Location = FMath::RandPointInBox(VolumeBox);

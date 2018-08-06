@@ -3,14 +3,10 @@
 #include "PuzzleNode.h"
 
 
-// Sets default values for this component's properties
+// Sets default values for this actor's properties
 APuzzleNode::APuzzleNode()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	//PrimaryComponentTick.bCanEverTick = false;
-
-	// ...
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 
@@ -25,7 +21,7 @@ void APuzzleNode::SetState(EPuzzleNodeState NewState)
 
 bool APuzzleNode::GetIsSolved()
 {
-	return State == EPuzzleNodeState::Solved;
+	return (State == EPuzzleNodeState::Solved);
 }
 
 void APuzzleNode::SetIsSolved(bool IsSolved)
@@ -48,23 +44,13 @@ void APuzzleNode::BeginPlay()
 	OnChildrenModified();
 }
 
-//APuzzleNode* APuzzleNode::GetPuzzleNode(AActor* Actor) 
-//{
-//	TArray<APuzzleNode*> Components;
-//	Actor->GetComponents<APuzzleNode>(Components);
-//
-//	return Components[0];
-//}
-
 void APuzzleNode::EvaluateChildren()
 {
 	EPuzzleNodeState NewState = EPuzzleNodeState::Solved;
 
-	// set newstate unsolved if any children are unsolved.
-	for (auto PuzzleNode : ChildNodes)
+	// new state should be unsolved if any children are unsolved
+	for (TSoftObjectPtr<APuzzleNode> PuzzleNode : ChildNodes)
 	{
-		//APuzzleNode* Node = GetPuzzleNode(Child);
-
 		if (PuzzleNode->State == EPuzzleNodeState::Unsolved) 
 		{
 			NewState = EPuzzleNodeState::Unsolved;
@@ -72,7 +58,7 @@ void APuzzleNode::EvaluateChildren()
 		}
 	}
 
-	// notify if state changed.
+	// notify if state changes
 	if (State != NewState)
 	{
 		State = NewState;
@@ -82,26 +68,27 @@ void APuzzleNode::EvaluateChildren()
 
 void APuzzleNode::OnStateChanged()
 {
+	// anytime a child node changes we check siblings to determine derived state of parent
+	// these changes can bubble up the puzzle node tree. (EvaluateChildren and OnStateChanged are mutually recursive)
 	if (Parent)
 	{
 		Parent->EvaluateChildren();
 	}
-	
+
+	// notify event subscribers of state change
 	if (State == EPuzzleNodeState::Solved) 
 	{
-		//OnSolved.Broadcast();
 		this->OnSolved();
 	}
 	else
 	{
-		//OnUnsolved.Broadcast();
 		this->OnUnsolved();
 	}
 }
 
 void APuzzleNode::OnChildrenModified()
 {
-	// iterate children and set their parent property to this.
+	// ensure children have a reference back to their parent
 	for (auto PuzzleNode : ChildNodes)
 	{
 		PuzzleNode->Parent = this;
