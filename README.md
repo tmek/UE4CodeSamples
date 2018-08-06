@@ -58,7 +58,7 @@ The files above implement a player interaction system using inheritance.  Design
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Components/InteractionComponent.h
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Components/InteractableComponent.h
 
-The files above implement a player interaction system using components.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This implementation can be demoed in the "TestMap".  For comparison, the NPC characters in this level have been given an interactable component that will make them jump when the player presses the interact key.  A drawback of this aproach could be spending extra time determining if an actor posesses the interactable behavior.
+The files above implement a player interaction system using components.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This implementation can be demoed in the "TestMap".  For comparison, the NPC characters in this level have been given an interactable component that will make them jump when the player presses the interact key.  A drawback of this aproach could be the extra time required to determine if an actor contains an interactable component.
 
 ### Hybrid 
 
