@@ -49,7 +49,7 @@ public:
 	APuzzleNode();
 
 	/** Current solved state of this node */
-	UPROPERTY(BlueprintReadOnly, Category = "Puzzle Nodes")
+	UPROPERTY(VisibleAnywhere, Category = "Puzzle Nodes")
 	EPuzzleNodeState State;
 
 	/** 
