@@ -41,7 +41,7 @@ This video demonstrates the current functionality of the player interaction and 
 [![Puzzle Node Video](http://img.youtube.com/vi/Sl4gk7NlG6Q/0.jpg)](http://www.youtube.com/watch?v=Sl4gk7NlG6Q)
 <br/>https://www.youtube.com/watch?v=Sl4gk7NlG6Q
 
-## Composition vs Inheritance
+## Components vs Inheritance
 
 There are two implementations of the player interaction system for comparison.
 
@@ -53,16 +53,16 @@ https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/I
 
 The files above implement a player interaction system using inheritance.  Designers can easily create derived blueprints that respond to the 'use' and 'stop using' blueprint events.  One flaw of this approach is it would be difficult to make classes that have already derived from actor (such as ACharacter) interactable.  This implementation can be demoed in the "ExampleMap".
 
-### Composition
+### Components
 
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Components/InteractionComponent.h
 https://github.com/tmek/UE4CodeSamples/blob/master/Source/AdventureGame/Public/Components/InteractableComponent.h
 
-The files above implement a player interaction system using composition.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This implementation can be demoed in the "TestMap".  For comparison, the NPC characters in this level have been given an interactable component that will make them jump when the player presses the interact key.  A drawback of this aproach could be spending extra time determining if an actor posesses the interactable behavior.
+The files above implement a player interaction system using components.  Designers can easily add an Interactable Component to any existing blueprint or class to make it player interactable.  This implementation can be demoed in the "TestMap".  For comparison, the NPC characters in this level have been given an interactable component that will make them jump when the player presses the interact key.  A drawback of this aproach could be spending extra time determining if an actor posesses the interactable behavior.
 
 ### Hybrid 
 
-A hybrid aproach (not done here) could use both composition (a component) and inheritance (an interface) providing immediate knowledge of the behavior and access to the component.  You get the benefits of both but the draw back of requiring a little more setup work and  coding knowledge from the user.
+A hybrid aproach (not done here) could use both a component and inheritance (an interface) providing immediate knowledge of the behavior and access to the component.  You get the benefits of both but the draw back of requiring a little more setup work and  coding knowledge from the user.
 
 ## Other Code/UE4 Features
 
