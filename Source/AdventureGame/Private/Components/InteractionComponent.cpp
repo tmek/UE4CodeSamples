@@ -45,6 +45,16 @@ void UInteractionComponent::StopInteracting()
 	}
 }
 
+AActor * UInteractionComponent::GetCurrentlyFocusedActor()
+{
+	if (FocusedInteractableComponent)
+	{
+		return FocusedInteractableComponent->GetOwner();
+	}
+
+	return nullptr;
+}
+
 void UInteractionComponent::BeginPlay()
 {
 	Super::BeginPlay();

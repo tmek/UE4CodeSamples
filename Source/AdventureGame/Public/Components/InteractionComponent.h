@@ -43,14 +43,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void StopInteracting();
 
+	/** Gets the currently focused actor. */
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	AActor* GetCurrentlyFocusedActor();
+
+	/** The last hit result we used. */
+	UPROPERTY(BlueprintReadOnly, Transient)
+	FHitResult LastHitResult;
+
 protected:
 	/** The currently focused interactable component if any. */
 	UPROPERTY(Transient)
 	UInteractableComponent* FocusedInteractableComponent;
-
-	/** The last hit result we used. */
-	UPROPERTY(Transient)
-	FHitResult LastHitResult;
 
 	/** The post process component to apply the highlight effect. */
 	UPROPERTY(Transient)
